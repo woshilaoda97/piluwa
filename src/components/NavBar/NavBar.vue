@@ -26,17 +26,17 @@ export default {
 <style lang="stylus">
     header
         display flex
-        height .51rem
+        height .102rem
         width 100%
         div
             position fixed
             top 0
             left 0
             width 100%
-            height .51rem
+            height .102rem
             text-align center
-            line-height .51rem
+            line-height .102rem
             background #fed
             z-index 10
-            font-size .16rem
+            font-size .32rem
 </style>

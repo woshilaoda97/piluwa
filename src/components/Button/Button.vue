@@ -28,9 +28,9 @@ export default {
 <style lang="stylus" scoped>
     button
         display flex
-        font-size .12rem
+        font-size .24rem
         color #aaa
         span
-            padding .1rem
+            padding .2rem
 
 </style>
