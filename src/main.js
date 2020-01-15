@@ -20,6 +20,11 @@ Vue.use( Vuex );
 Vue.use( Vant );
 const router = createRouter( Router );
 const store = createVuex( Vuex );
+//全局路由守卫
+router.beforeEach((to,from,next)=>{
+  console.log(to)
+  next()
+})
 
 new Vue({
   el: '#app',
