@@ -1,6 +1,6 @@
 <template>
     <div>
-        Kind
+        Kind hy
     </div>
 </template>
 
