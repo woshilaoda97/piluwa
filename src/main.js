@@ -17,6 +17,11 @@ Vue.use( Router );
 Vue.use( Vuex );
 const router = createRouter( Router );
 const store = createVuex( Vuex );
+//全局路由守卫
+router.beforeEach((to,from,next)=>{
+  console.log(to)
+  next()
+})
 
 new Vue({
   el: '#app',
