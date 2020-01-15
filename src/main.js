@@ -19,7 +19,7 @@ const router = createRouter( Router );
 const store = createVuex( Vuex );
 //全局路由守卫
 router.beforeEach((to,from,next)=>{
-  console.log(to)
+  window.console.log(to)
   next()
 })
 
