@@ -47,7 +47,7 @@ export default {
         bottom 0
         left 0
         width 100%
-        height .51rem
+        height 1.02rem
         background #fff
-        box-shadow 0 -.07rem .55rem 0 rgba(58,33,36,0.12)
+        box-shadow 0 -.14rem 1.1rem 0 rgba(58,33,36,0.12)
 </style>
