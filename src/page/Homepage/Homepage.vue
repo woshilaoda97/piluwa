@@ -1,8 +1,9 @@
 <template>
     <div>
-        <figure>
-            <img :src="require('../../assets/img/mainpic.jpg')" alt="">
-        </figure>
+        <!-- 背景图 -->
+        <figure></figure>
+        <!-- 搜索 -->
+        <seek></seek>
     </div>
 </template>
 
@@ -17,7 +18,9 @@ export default {
 
 <style lang="stylus" scoped>
     figure 
-        img
-            width 100%
+        width 100%
+        height 2.3rem
+        background url(../../assets/img/mainpic.jpg) no-repeat 0 0/100% auto
+            
 
 </style>
