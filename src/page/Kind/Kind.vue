@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-search placeholder="请输入搜索关键词" shape="round" v-model="value" />
+    <van-search placeholder="新春大促销" shape="round" v-model="value" />
   </div>
 </template>
 
