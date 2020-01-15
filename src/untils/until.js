@@ -23,3 +23,4 @@ _.isObject = obj => {
 _.strClear = str => {
     return str.replace(/[\r\n\s]/g, '');
 }
+

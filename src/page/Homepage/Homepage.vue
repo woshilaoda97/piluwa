@@ -61,6 +61,7 @@ export default {
 <style lang="stylus" scoped>
     //背景图片
     figure 
+        position absolute
         width 100%
         height 3.4rem
         background url(../../assets/img/mainpic.jpg) no-repeat 0 0/100% auto
