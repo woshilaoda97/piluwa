@@ -5,6 +5,7 @@ import actions from './actions';
 
 const createVuex = Vuex => {
     return new Vuex.Store({
+        strict: true,
         state,
         getters,
         mutations,
