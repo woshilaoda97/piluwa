@@ -8,7 +8,10 @@
 
 <script>
 export default {
-    name: 'Homepage'
+    name: 'Homepage',
+    created () {
+        this.$store.commit("showTestData", 'hello');
+    }
 }
 </script>
 
