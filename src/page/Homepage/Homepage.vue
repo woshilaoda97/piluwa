@@ -2,8 +2,6 @@
     <div>
         <!-- 背景图 -->
         <figure></figure>
-        <!-- 搜索 -->
-        <seek></seek>
     </div>
 </template>
 
@@ -18,6 +16,7 @@ export default {
 
 <style lang="stylus" scoped>
     figure 
+        position absolute
         width 100%
         height 2.3rem
         background url(../../assets/img/mainpic.jpg) no-repeat 0 0/100% auto
