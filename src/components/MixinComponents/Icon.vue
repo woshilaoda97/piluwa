@@ -15,8 +15,8 @@ export default {
         iconStyleObject () {//设置icon样式 长宽默认.25rem
             if(!this.icon) return;
             let icon =  this.icon;
-            let width = icon.width || '.18rem';
-            let height = icon.height || '.18rem';
+            let width = icon.width || '.36rem';
+            let height = icon.height || '.36rem';
             return {
                 width,
                 height,

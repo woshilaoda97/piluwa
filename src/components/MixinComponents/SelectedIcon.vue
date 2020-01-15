@@ -21,8 +21,8 @@ export default {
         iconStyleObject () {//设置icon样式 长宽默认.25rem
             if(!this.icon) return;
             let icon =  this.icon;
-            let width = icon.width || '.18rem';
-            let height = icon.height || '.18rem';
+            let width = icon.width || '.36rem';
+            let height = icon.height || '.36rem';
             return {
                 width,
                 height,
@@ -32,8 +32,8 @@ export default {
         selectedIconStyleObject () {//选中后如果没设置宽高/默认为选择前的宽高
             if(!this.selectedIcon) return this.iconStyleObject; //如果没有设置选中选项则为选中前
             let selectedIcon = this.selectedIcon;
-            let width = selectedIcon.width   || this.icon.width  || '.18rem';
-            let height = selectedIcon.height || this.icon.height || '.18rem';
+            let width = selectedIcon.width   || this.icon.width  || '.36rem';
+            let height = selectedIcon.height || this.icon.height || '.36rem';
             return {
                 width,
                 height,

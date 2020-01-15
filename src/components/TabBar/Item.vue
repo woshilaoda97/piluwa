@@ -62,13 +62,13 @@ export default {
         justify-content space-evenly
         align-items center
         flex 1
-        height .5rem
+        height 1rem
         color #000
         p
             width 100%
-            height .12rem
-            line-height .12rem
+            height .24rem
+            line-height .24rem
             color #696969
-            font-size .10rem
+            font-size .2rem
             text-align center
 </style>

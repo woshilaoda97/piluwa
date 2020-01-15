@@ -48,7 +48,7 @@
         if (width / dpr >= 768){//平板适配
             width = 768 * dpr;
         }
-        rem = width / 3.75; //设计图宽度大小750px
+        rem = width / 7.5; //设计图宽度大小750px
         html.style.fontSize = `${rem}px`;
     }
 

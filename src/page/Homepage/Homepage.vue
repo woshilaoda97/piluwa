@@ -11,7 +11,7 @@
 export default {
     name: 'Homepage',
     created () {
-        this.$store.commit("showTestData", 'hello');
+        // this
     }
 }
 </script>
