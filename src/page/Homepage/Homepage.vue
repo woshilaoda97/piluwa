@@ -3,7 +3,7 @@
         <!-- 背景图 -->
         <figure></figure>
         <!-- 搜索 -->
-        <seek></seek>
+        
     </div>
 </template>
 
