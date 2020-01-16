@@ -3,7 +3,7 @@
         <!-- 背景图 -->
         <figure>
         <!-- 搜索 -->
-            <div id="seek">
+            <div id="seek" @click="toSearch">
                 <van-icon name="search" />
                  新春大促销
             </div>
@@ -79,6 +79,11 @@ export default {
         [Icon.name]: Icon,
         HomepageVideo,
         HomepageCommodity
+    },
+    methods: {
+        toSearch () {
+            this.$router.history.push('/search')
+        }
     }
 }
 </script>
