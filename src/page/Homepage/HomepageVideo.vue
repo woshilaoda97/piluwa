@@ -3,7 +3,7 @@
         <van-cell title="精选视频" value="更多" is-link />
         <!-- 精选视频 -->
         <div id="video">
-            <img src="../../assets/img/video1.png" alt="" id="video-img">
+            <img src="../../assets/img/video1.png" alt="" id="video-img" @click="show">
             <img src="../../assets/img/video2.png" alt="" id="video-img">
         </div>
         
@@ -11,12 +11,17 @@
 </template>
 
 <script>
-import { Cell, CellGroup } from 'vant';
+import { Cell, CellGroup, Toast } from 'vant';
 export default {
     name : 'HomepageVideo',
     components : {
         [Cell.name] : Cell,
         [CellGroup.name] : CellGroup,
+    },
+    methods : {
+        show () {
+            Toast ('抱歉，您还不是超级会员！')
+        }
     }
 
 }
@@ -44,6 +49,12 @@ export default {
             height 2.4rem
             display block
             border-radius .1rem
+    .van-toast
+        font-size .2rem !important
+        line-height .2rem !important
+    .van-toast__text
+        font-size .2rem !important
+        line-height .2rem !important
             
     
 </style>

@@ -23,7 +23,7 @@
                 <img src="../../assets/img/Icon3.jpg" alt="" id="weal-img">
                 皮噜甄选 
             </li>
-            <li id="weal-li"> 
+            <li id="weal-li" @click ="show"> 
                 <img src="../../assets/img/Icon4.jpg" alt="" id="weal-img">
                 吐槽树洞
             </li>
@@ -64,7 +64,7 @@
         </ul>
         <HomepageVideo></HomepageVideo>
         <HomepageCommodity></HomepageCommodity>
-        <good-wrap></good-wrap>
+        <GoodWrap></GoodWrap>
     </div>
 </template>
 
@@ -72,7 +72,7 @@
 
 import HomepageVideo from './HomepageVideo'
 import HomepageCommodity from './HomepageCommodity'
-import { Icon } from 'vant'
+import { Icon, Toast } from 'vant'
 import GoodWrap from '../../components/GoodWrap/GoodWrap.vue'
 
 export default {
@@ -80,11 +80,15 @@ export default {
     components: {
         [Icon.name]: Icon,
         HomepageVideo,
-        HomepageCommodity
+        HomepageCommodity,
+        GoodWrap
     },
     methods: {
         toSearch () {
             this.$router.history.push('/search')
+        },
+        show () {
+            Toast ('开发中')
         }
     }
 }
