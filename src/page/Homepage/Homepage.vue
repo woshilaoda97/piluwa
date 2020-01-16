@@ -64,6 +64,7 @@
         </ul>
         <HomepageVideo></HomepageVideo>
         <HomepageCommodity></HomepageCommodity>
+        <good-wrap></good-wrap>
     </div>
 </template>
 
@@ -72,6 +73,7 @@
 import HomepageVideo from './HomepageVideo'
 import HomepageCommodity from './HomepageCommodity'
 import { Icon } from 'vant'
+import GoodWrap from '../../components/GoodWrap/GoodWrap.vue'
 
 export default {
     name: 'Homepage',
