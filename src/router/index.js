@@ -3,6 +3,7 @@ import Homepage from "../page/Homepage/Homepage";
 import Kind from "../page/Kind/Kind";
 import My from "../page/My/My";
 import Login from "../page/Login/Login.vue"
+import Detail from "../page/Detail/detail.vue"
 
 const createRouter = ( Router )=> {
     return new Router({
@@ -44,6 +45,11 @@ const createRouter = ( Router )=> {
             {
                 path:"/login",
                 component:Login,
+                
+            },
+            {
+                path:"/detail",
+                component:Detail,
                 
             }
         ]

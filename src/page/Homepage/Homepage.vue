@@ -3,7 +3,10 @@
         <!-- 背景图 -->
         <figure>
         <!-- 搜索 -->
-            <div id="seek">双十一大促销</div>
+            <div id="seek">
+                <van-icon name="search" />
+                双十一大促销
+            </div>
 
         </figure>
         <!-- 每日福利 -->
@@ -28,18 +31,30 @@
         <!-- 全球奶粉 -->
         <ul id="global">
             <li id="global-li1">
+                <p id="global-p">
+                    全球奶粉
+                </p>
                 <img src="../../assets/img/quanqiu.jpg" alt="" id="global-img1">
             </li>
             <li id="global-li2">
+                <p id="global-p">
+                    尿不湿
+                </p>
                 <img src="../../assets/img/niaobushi.jpg" alt="" id="global-img2">
             </li>
         </ul>
         <!-- 营养辅食 -->
         <ul id="food">
             <li id="food-li1">
+                <p id="food-p">
+                    营养辅食
+                </p>
                 <img src="../../assets/img/food.jpg" alt="" id="food-img1">
             </li>
             <li id="food-li2">
+                <p id="food-p">
+                    宝宝洗护
+                </p>
                  <img src="../../assets/img/baby.jpg" alt="" id="food-img2">
             </li>
         </ul>
@@ -50,18 +65,21 @@
 </template>
 
 <script>
+import { Icon } from 'vant'
+
 export default {
     name: 'Homepage',
-    created () {
-        // this
+    components: {
+        [Icon.name]: Icon,
     }
 }
 </script>
 
 <style lang="stylus" scoped>
+    body 
+        background rgb(245,245,245)
     //背景图片
     figure 
-        position absolute
         width 100%
         height 3.4rem
         background url(../../assets/img/mainpic.jpg) no-repeat 0 0/100% auto
@@ -88,6 +106,7 @@ export default {
             align-items center
             justify-content center
             margin 0 auto
+
             
             #weal-li
                 list-style none
@@ -102,31 +121,36 @@ export default {
             display flex
             align-items center
             justify-content center
-
+            li
+                display flex
+                align-items center
+                justify-content space-evenly
             #global-li1
                 list-style none
                 width 3.4rem
                 height 2.05rem
-                background: rgb(252, 245, 228);
+                background: rgb(253, 246, 229);
                 margin-right .24rem
                 
             #global-li2
                 list-style none
                 width 3.4rem
                 height 2.05rem
-                background: rgb(251, 243, 243);
+                background: rgb(251, 242, 244);
+            //全球奶粉标题
+            #global-p
+                font-size .3rem
+
             //全球奶粉图片
             #global-img1
                 width 1.4rem
                 height 1.2rem
-                margin-left 2rem
-                margin-top .6rem
+                margin-top .3rem
             //尿不湿图片
             #global-img2
                 width 1.4rem
                 height 1.2rem
-                margin-left 2rem
-                margin-top .6rem
+                margin-top .3rem
                 
 
         //营养辅食
@@ -137,7 +161,10 @@ export default {
             align-items center
             justify-content center
             margin-top .24rem
-
+            li
+                display flex
+                align-items center
+                justify-content space-evenly
             #food-li1
                 list-style none
                 width 3.4rem
@@ -150,19 +177,20 @@ export default {
                 list-style none
                 width 3.4rem
                 height 2.05rem
-                background: rgb(246, 247, 250);
+                background: rgb(247, 248, 253);
+            //营养辅食标题
+            #food-p
+                font-size .3rem
             //营养辅食图片
             #food-img1
                 width 1.4rem
                 height 1.2rem
-                margin-left 2rem
-                margin-top .6rem
+                margin-top .3rem
             //宝宝洗护图片
             #food-img2
                 width 1.4rem
                 height 1.2rem
-                margin-left 2rem
-                margin-top .6rem
+                margin-top .3rem
                  
             
             

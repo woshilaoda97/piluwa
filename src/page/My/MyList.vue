@@ -26,7 +26,7 @@ export default {
         display flex
         align-items center
         height 1rem
-        font-size .3rem
+        font-size .25rem
     .van-cell__title
         color #000
     .van-icon
