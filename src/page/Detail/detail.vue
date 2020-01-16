@@ -8,6 +8,9 @@
       <van-swipe-item ><img src="https://img.yzcdn.cn/vant/apple-1.jpg" alt=""></van-swipe-item>
       <div class="custom-indicator" slot="indicator">{{ current + 1 }}/{{size}}</div>
     </van-swipe>
+    <!-- 商品描述 -->
+    <goodsTitle/>
+
     <!-- 底部按钮 -->
     <van-goods-action>
       <van-goods-action-icon icon="chat-o" text="客服" color="#07c160" />
@@ -20,22 +23,13 @@
 </template>
 
 <script>
-// 底部加车模块
+
 import Vue from "vue";
-import { GoodsAction, GoodsActionIcon, GoodsActionButton } from "vant";
+import { GoodsAction, GoodsActionIcon, GoodsActionButton, Swipe, SwipeItem } from "vant";
+import goodsTitle from './goodstitle'
 
-Vue.use(GoodsAction)
-  .use(GoodsActionIcon)
-  .use(GoodsActionButton);
-// 底部加车模块
-
-//轮播图
-import { Swipe, SwipeItem } from 'vant';
-Vue.use(Swipe).use(SwipeItem);
-//轮播图
 
 export default {
-  components: {},
   name: "Detail",
   methods: {},
   data() {
@@ -48,9 +42,28 @@ export default {
     onChange(index) {
       this.current = index;
     }
-  }
+  },
+  components: {
+     [GoodsAction.name]       : GoodsAction,
+     [GoodsActionIcon.name]   : GoodsActionIcon,
+     [GoodsActionButton.name] : GoodsActionButton,
+     [Swipe.name]             : Swipe,
+     [SwipeItem.name]         : SwipeItem,
+     goodsTitle
+  },
 };
 </script>
-    
-<style lang="stylus" scoped></style>
+
+<style lang="stylus" scoped>
+    .custom-indicator
+        position absolute
+        right .1rem
+        bottom .1rem
+        padding .04rem .1rem
+        color #fff
+        font-size .24rem
+        background rgba(0, 0, 0, 0.1)
+    .van-button
+        font-size .24rem
+</style>
 
