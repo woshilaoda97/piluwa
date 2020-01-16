@@ -25,13 +25,16 @@
 </template>
 
 <script>
+import Vue from 'vue';
 import { Icon, Image } from 'vant';
+Vue.use(Icon)
+Vue.use(Image)
 
 export default {
-    components: {
-        [Icon.name]: Icon,
-        [Image.name]: Image,
-    }
+    // components: {
+    //     [Icon.name]: Icon,
+    //     [Image.name]: Image,
+    // }
 }
 </script>
 
