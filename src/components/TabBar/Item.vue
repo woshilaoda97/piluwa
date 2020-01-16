@@ -41,14 +41,18 @@ export default {
         }
     },
     methods: {
-        clickHandler () {
+        toLink () {
             this.$router.history.push(this.link);
+        },
+        clickHandler () {
+            this.toLink();
             this.bus.$emit('key', this.k);//点击发布key事件/告知兄弟节点谁被点击了
         }
     },
 
     created () {
         this.bus.$on('key', (key) => {
+            if (key == this.k ) this.toLink();
             this.selected = key==this.k ? true : false;
         })
     }

@@ -52,7 +52,8 @@ export default {
         width 1.56rem
         height .4rem
         color #fff9d7
-        font-size .4rem
+        .van-icon
+            font-size .4rem
     .avatar
         display flex
         height 1.12rem
