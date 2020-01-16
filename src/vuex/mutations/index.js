@@ -1,5 +1,5 @@
 module.exports = {
-    showTestData ( data ) {
-        console.log(data);
+    showTestData ( state,data ) {
+        console.log(state,data);
     }
 }
