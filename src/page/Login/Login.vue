@@ -16,7 +16,7 @@
         </div>
         <div>
           <input type="text" class="inp" placeholder="请输入密码" />
-          <van-button plain round type="warning" class="forgetpass">忘记密码</van-button>
+          <van-button plain round type="warning" class="forgetpass" size="mini">忘记密码</van-button>
         </div>
       </div>
       <van-button :disabled="disable" round type="primary" class="login-btn">登录</van-button>
@@ -127,6 +127,7 @@ div
         position: absolute;
         right: 0;
         bottom: 0.1rem;
+        font-size .2rem
       
 
   .login-btn 
