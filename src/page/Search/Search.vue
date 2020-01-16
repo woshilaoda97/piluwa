@@ -10,6 +10,7 @@
             <div slot="action" @click="onSearch">搜索</div>
             </van-search>
         </div>
+        
     </div>
 </template>
 
@@ -43,6 +44,7 @@ export default {
             height 0.6rem
             .van-field__control
                 display block
-                height 0.5rem 
+                height 0.3rem 
                 font-size .2rem
+                
 </style>
