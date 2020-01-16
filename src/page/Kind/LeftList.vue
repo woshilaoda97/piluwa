@@ -1,7 +1,9 @@
 <template>
   <div class="kind">
     <!-- 分类列表 -->
-    <van-tree-select height="55vw" :items="items" :main-active-index.sync="activeIndex">
+    <van-tree-select height="100%" 
+    :items="items" 
+    :main-active-index.sync="activeIndex">
       <template slot="content">
         <RightShop />
       </template>
@@ -37,9 +39,9 @@ export default {
 };
 </script>
 <style lang="stylus" scoped>
-.kind {
-  flex: 1;
-  height: 100%;
-  overflow: auto;
-}
+      .kind 
+        flex 1
+        height 100%
+        overflow auto
+
 </style>

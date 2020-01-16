@@ -1,18 +1,26 @@
 <template>
     <div class="container">
-        <div class="bg"></div>
+        <div class="bg">
+            <div class="bg-top"></div>
+        </div>
         <main>
-            <van-button type="default" size="large">默认按钮</van-button>
+            <MyHeader></MyHeader>
+            <MyOrder></MyOrder>
+            <MyList></MyList>
         </main>
     </div>
 </template>
 
 <script>
-import { Button } from "vant"
+import MyOrder from './MyOrder';
+import MyHeader from './MyHeader';
+import MyList from './MyList';
 
 export default {
     components: {
-        [Button.name]: Button,
+        MyHeader,
+        MyOrder,
+        MyList,
     },
     name: 'My',
 }
@@ -24,9 +32,13 @@ export default {
         main
             padding .7rem .3rem 0
     .bg 
-        position absolute
-        width 100%
-        height 3rem
-        background-image linear-gradient(45deg, #f9b27e , #e66524);
+        position fixed
         z-index -1
+        width  100%
+        height 100%
+        background #f8f8f8
+        .bg-top
+            width  100%
+            height 3rem
+            background-image linear-gradient(45deg, #f9b27e , #e66524);
 </style>
