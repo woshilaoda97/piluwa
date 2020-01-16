@@ -1,11 +1,16 @@
 <template>
-    <div>
-        Kind hy
-    </div>
+    
 </template>
 
 <script>
+
 export default {
-    name: 'Kind'
+    name: 'Kind',
+   
+    
 }
 </script>
+
+<style lang="stylus" scoped>
+   
+</style>
