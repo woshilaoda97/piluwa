@@ -11,6 +11,7 @@
             <div slot="action" @click="onSearch">搜索</div>
             </van-search>
         </div>
+        
     </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
     <div>
         <van-cell value="推荐商品" />
-        <div id="commodity">
+        <div>
 
         </div>
     </div>
@@ -22,6 +22,7 @@ export default {
 <style lang="stylus" scoped>
     .van-cell__value--alone
         font-size .3rem
+
     span::before
         content 'i'
         color transparent
@@ -29,9 +30,7 @@ export default {
         margin-right .1rem
         background rgb(229,139,42)
         margin-right .1rem
-
-    #commodity
-        width 100%
-        height 9rem
-        background rgb(245,245,245)
+    .van-cell:not(:last-child)::after
+        border-bottom 0rem
+        margin-bottom 0rem
 </style>

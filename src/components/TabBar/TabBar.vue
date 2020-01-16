@@ -37,8 +37,8 @@ export default {
 
     async mounted () {
         await this.$nextTick();
-        let key = this.defaultSelected || this.$children[0].k;
-        this.bus.$emit('key', key);
+        // let key = this.defaultSelected || this.$children[0].k;
+        // this.bus.$emit('key', key);
     },
     watch: {
         path () {
