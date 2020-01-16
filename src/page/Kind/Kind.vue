@@ -1,11 +1,16 @@
 <template>
   <div>
-    <van-search placeholder="请输入搜索关键词" shape="round" v-model="value" />
+    <van-search placeholder="新春大促销" shape="round" v-model="value"/>
+    <LeftList></LeftList>
+   
   </div>
 </template>
 
 <script>
 import { Search } from 'vant';
+import LeftList from './LeftList'
+
+
 export default {
     data () {
         return {
@@ -14,10 +19,9 @@ export default {
     },
     components: {
         [Search.name]: Search,
+        LeftList,
+       
     }
 }
 </script>
 
-<style lang="stylus" scoped>
-   
-</style>

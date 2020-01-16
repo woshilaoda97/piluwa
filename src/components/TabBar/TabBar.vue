@@ -29,12 +29,21 @@ export default {
             default: "#00c6ff",
         },
     },
+    computed: {
+        path () {
+            return this.$route.path
+        }
+    },
 
     async mounted () {
         await this.$nextTick();
-        let key = this.defaultSelected || this.$children[0].k
-        console.log(key);
-        this.bus.$emit('key', key)
+        let key = this.defaultSelected || this.$children[0].k;
+        this.bus.$emit('key', key);
+    },
+    watch: {
+        path () {
+            this.bus.$emit('key', this.path.slice(1));
+        }
     },
     Item,
 }
