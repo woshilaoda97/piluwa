@@ -17,8 +17,18 @@
 import { Search } from 'vant';
 export default {
     name : 'Search',
+    data () {
+        return {
+            value : null
+        }
+    },
     components : {
         [Search.name] : Search
+    },
+    methods :{
+        onSearch () {
+
+        }
     }
 
 }
