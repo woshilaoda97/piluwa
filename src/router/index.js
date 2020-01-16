@@ -4,6 +4,7 @@ import Kind from "../page/Kind/Kind";
 import My from "../page/My/My";
 import Login from "../page/Login/Login.vue"
 import Detail from "../page/Detail/detail.vue"
+import Search from "../page/Search/Search.vue"
 
 const createRouter = ( Router )=> {
     return new Router({
@@ -16,6 +17,10 @@ const createRouter = ( Router )=> {
                 meta:{
                     footshow:true
                 }
+            },
+            {
+                path:'/search',
+                component : Search
             },
             {
                 path: '/cart',
