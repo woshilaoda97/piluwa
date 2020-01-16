@@ -21,7 +21,7 @@ export default {
             type: Object,
         }
     },
-    computed
+    // computed
 }
 </script>
 
