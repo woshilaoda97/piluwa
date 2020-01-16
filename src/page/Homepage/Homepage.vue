@@ -1,11 +1,11 @@
 <template>
-    <div>
+    <div id="body">
         <!-- 背景图 -->
         <figure>
         <!-- 搜索 -->
-            <div id="seek">
+            <div id="seek" @click="toSearch">
                 <van-icon name="search" />
-                双十一大促销
+                 新春大促销
             </div>
 
         </figure>
@@ -17,7 +17,7 @@
             </li>
             <li id="weal-li"> 
                 <img src="../../assets/img/Icon2.jpg" alt="" id="weal-img">
-                热销榜 
+                热销榜单 
             </li>
             <li id="weal-li"> 
                 <img src="../../assets/img/Icon3.jpg" alt="" id="weal-img">
@@ -25,7 +25,11 @@
             </li>
             <li id="weal-li"> 
                 <img src="../../assets/img/Icon4.jpg" alt="" id="weal-img">
-                会员中心 
+                吐槽树洞
+            </li>
+            <li id="weal-li"> 
+                <img src="../../assets/img/Icon5.jpg" alt="" id="weal-img">
+                超级会员
             </li>
         </ul>
         <!-- 全球奶粉 -->
@@ -58,26 +62,35 @@
                  <img src="../../assets/img/baby.jpg" alt="" id="food-img2">
             </li>
         </ul>
-
-
-        
+        <HomepageVideo></HomepageVideo>
+        <HomepageCommodity></HomepageCommodity>
     </div>
 </template>
 
 <script>
+
+import HomepageVideo from './HomepageVideo'
+import HomepageCommodity from './HomepageCommodity'
 import { Icon } from 'vant'
 
 export default {
     name: 'Homepage',
     components: {
         [Icon.name]: Icon,
+        HomepageVideo,
+        HomepageCommodity
+    },
+    methods: {
+        toSearch () {
+            this.$router.history.push('/search')
+        }
     }
 }
 </script>
 
 <style lang="stylus" scoped>
-    body 
-        background rgb(245,245,245)
+    // #body 
+    //     background rgb(245,245,245)
     //背景图片
     figure 
         width 100%
@@ -86,11 +99,12 @@ export default {
         overflow hidden
         //搜索框
         #seek
+            display flex
+            align-items center
             width 7rem
             height .6rem
-            background #ccc
+            background rgba(0,0,0,.25)
             border-radius .3rem
-            opacity 0.6
             margin 0 auto
             margin-top .3rem
             line-height .6rem
@@ -106,11 +120,12 @@ export default {
             align-items center
             justify-content center
             margin 0 auto
+            background rgb(245,245,245)
 
             
             #weal-li
                 list-style none
-                width 25%
+                width 20%
                 text-align center
             #weal-img
                 margin 0 auto
@@ -121,6 +136,7 @@ export default {
             display flex
             align-items center
             justify-content center
+            background rgb(245,245,245)
             li
                 display flex
                 align-items center
@@ -156,11 +172,13 @@ export default {
         //营养辅食
         #food
             width 100%
-            height 2.06rem
+            height 2.3rem
             display flex
             align-items center
             justify-content center
-            margin-top .24rem
+            padding-top .24rem
+            background rgb(245,245,245)
+            padding-bottom .2rem
             li
                 display flex
                 align-items center

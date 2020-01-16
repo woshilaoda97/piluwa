@@ -25,13 +25,16 @@
 </template>
 
 <script>
+import Vue from 'vue';
 import { Icon, Image } from 'vant';
+Vue.use(Icon)
+Vue.use(Image)
 
 export default {
-    components: {
-        [Icon.name]: Icon,
-        [Image.name]: Image,
-    }
+    // components: {
+    //     [Icon.name]: Icon,
+    //     [Image.name]: Image,
+    // }
 }
 </script>
 
@@ -66,11 +69,11 @@ export default {
         display flex
         align-items center
         position relative
-        left .75rem
-        width 1.3rem
+        left .76rem
+        width 1.1rem
         line-height .5rem
         text-indent .08rem
-        border-radius .25rem
+        border-radius .25rem 0 0 .25rem
         background-color rgba(0,0,0,0.3)
         color #fff9d7
         font-size .25rem
