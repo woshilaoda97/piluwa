@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrap">
     <!-- 轮播图 -->
     <van-swipe @change="onChange">
       <van-swipe-item>
@@ -197,8 +197,8 @@ export default {
     height 1rem
     .van-hairline--top-bottom
       height .8rem
-      .van-tab__text
-        font-size .2rem
+  .wrap >>> .van-tab__text
+    font-size .2rem
 
 </style>
 
