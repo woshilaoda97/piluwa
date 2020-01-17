@@ -12,6 +12,7 @@
 
 <script>
 import { Cell, CellGroup, Toast } from 'vant';
+// import { Toast } from '../../components';
 export default {
     name : 'HomepageVideo',
     components : {
@@ -49,12 +50,5 @@ export default {
             height 2.4rem
             display block
             border-radius .1rem
-    .van-toast
-        font-size .2rem !important
-        line-height .2rem !important
-    .van-toast__text
-        font-size .2rem !important
-        line-height .2rem !important
-            
     
 </style>
