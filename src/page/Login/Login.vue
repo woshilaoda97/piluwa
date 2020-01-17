@@ -90,7 +90,7 @@ div
   
 
   img 
-    margin-top: 0.5rem;
+    margin-top: 0.8rem;
     height: 2.4rem;
     width: 2.4rem;
     overflow: hidden;
@@ -100,12 +100,10 @@ div
     margin-top: 1.8rem;
 
     .button 
-      height: 1rem;
+      height: 1.1rem;
       width: 6.5rem;
       margin-bottom: 0.6rem;
-      font-size: 0.34rem;
-    
-  
+      font-size: 0.3rem;
 
   .form 
     margin-top: 0.5rem;
