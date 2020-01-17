@@ -7,8 +7,6 @@
             <MyHeader></MyHeader>
             <MyOrder></MyOrder>
             <MyList></MyList>
-            <van-goods-action>
-</van-goods-action>
         </main>
     </div>
 </template>

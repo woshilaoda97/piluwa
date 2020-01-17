@@ -44,6 +44,7 @@ export default {
         justify-content space-between
         align-items center
         margin-bottom .3rem
+        border-bottom  0rem 
         p
             font-size .28rem
             font-weight bold
@@ -54,6 +55,7 @@ export default {
             span 
                 font-size .22rem
                 color #a2a0a1   
+
     .van-grid-item
         height 1.55rem
         .van-grid-item__icon
@@ -63,4 +65,8 @@ export default {
             justify-content space-between
         .van-grid-item__text
             font-size .26rem
+        .van-hairline::after
+            border 0rem
+    .van-hairline--top::after 
+        border-top 0rem
 </style>

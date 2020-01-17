@@ -50,5 +50,9 @@ export default {
             height 2.4rem
             display block
             border-radius .1rem
+    .van-toast
+        font-size .2rem !important
+        line-height .2rem !important
+            
     
 </style>
