@@ -52,9 +52,6 @@ export default {
     .van-toast
         font-size .2rem !important
         line-height .2rem !important
-    .van-toast__text
-        font-size .2rem !important
-        line-height .2rem !important
             
     
 </style>

@@ -198,7 +198,24 @@ export default {
     .van-hairline--top-bottom
       height .8rem
   .wrap >>> .van-tab__text
-    font-size .2rem
+    font-size .28rem
+  .van-cell:not(:last-child)::after
+    border-bottom 0rem 
+
+
+  //购物车，购买栏
+  .wrap >>> .van-goods-action
+    height 1rem
+    .van-button
+      height .8rem 
+    .van-goods-action-icon
+      height .8rem
+    .van-icon
+      font-size .36rem
+      
+  // .van-goods-action-icon
+  //   height 1.5rem
+
 
 </style>
 
