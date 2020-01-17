@@ -1,6 +1,6 @@
 <template>
     <div id="goodwrap-background">
-        <div id="goodwrap">
+        <div id="goodwrap" @click="jump">
             <img src="" alt="" id="goodwrap-img">
             <p id="goodwrap-title">
                 日本进口一级帮宝适拉拉裤大包装 S72片
@@ -18,7 +18,13 @@
 <script>
 export default {
     
-    name : 'GoodWrap'
+    name : 'GoodWrap',
+    
+    methods: {
+        jump(){
+            this.$router.push(`/detail/${this}`)
+        }
+    },
 }
 </script>
 

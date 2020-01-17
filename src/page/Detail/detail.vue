@@ -19,7 +19,7 @@
     <!-- 商品描述 -->
     <goodsTitle />
     <!-- 规格 -->
-    <van-cell title="规格" is-link @click="ChangeShow" />
+    <van-cell title="可选规格" is-link @click="ChangeShow" />
     <van-sku
       v-model="show"
       :sku="sku"
@@ -29,8 +29,8 @@
     />
     <!-- 列表详情 -->
     <van-tabs v-model="activeName">
-        <van-tab title="标签 1" name="a">内容 1</van-tab>
-        <van-tab title="标签 2" name="b">内容 2</van-tab>
+        <van-tab title="图文详情" name="a">内容 1</van-tab>
+        <van-tab title="商品参数" name="b">内容 2</van-tab>
     </van-tabs>
     <!-- 底部按钮 -->
     <van-goods-action>
@@ -170,22 +170,35 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.custom-indicator 
-    position: absolute;
-    right: 0.1rem;
-    bottom: 0.1rem;
-    padding: 0.04rem 0.1rem;
-    color: #fff;
-    font-size: 0.24rem;
-    background: rgba(0, 0, 0, 0.1);
+  .custom-indicator 
+      position: absolute;
+      right: 0.1rem;
+      bottom: 0.1rem;
+      padding: 0.04rem 0.1rem;
+      color: #fff;
+      font-size: 0.24rem;
+      background: rgba(0, 0, 0, 0.1);
 
 
-.van-button 
-    font-size: 0.24rem;
+  .van-button 
+      font-size: 0.24rem;
 
-.van-swipe
-    height 6rem
-    img
-        width 100%
+  .van-swipe
+      height 6rem
+      img
+          width 100%
+  .van-cell 
+    margin-left .2rem
+    font-size .28rem
+    width 7rem
+    padding 0 
+
+  .van-tabs
+    height 1rem
+    .van-hairline--top-bottom
+      height .8rem
+      .van-tab__text
+        font-size .2rem
+
 </style>
 

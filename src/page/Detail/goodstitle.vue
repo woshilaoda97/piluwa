@@ -1,12 +1,12 @@
 <template>
-    <div>
+    <div id="goodstitle">
         <h2>
-            <p>{{vipPrice}}</p>
-            <span>会员专享</span>
+            <p><span class="samll">¥</span>{{vipPrice}}.00</p>
+            <span class="vip">会员专享</span>
         </h2>
-        <p>{{price}}</p>
+        <span class="title"> 现货 </span>
         <h3>{{productName}}</h3>
-        <p>{{description}}</p>
+        <p class="describe">{{description}}</p>
     </div>
 </template>
 
@@ -16,10 +16,9 @@
     export default{
         data(){
             return{
-                price:89,
                 vipPrice:75,
-                productName:`苹果手机`,
-                description:`正品保障`
+                productName:`日本进口一级帮宝适拉拉裤大包装 S72 片`,
+                description:`适用于4岁以上`
             }
         },
         computed:{
@@ -35,24 +34,48 @@
         color #c86a24;
         display flex
         padding .2rem
-        height 1.2rem
+        height .9rem
         p
             font-weight 600
-            font-size .8rem
+            font-size .4rem
             margin-right  .2rem
-        span
+            .samll
+                font-size .2rem
+        .vip
             font-weight 500
-            font-size .24rem
-            height 50%
-            background  #fae4d7
+            font-size .22rem
+            height .36rem
+            width 1.2rem
+            background rgb(226,111,45)
             border-radius  .15rem
-    p
-        font-size .4rem
+            line-height .36rem
+            text-align center
+            margin-top .1rem
+            color #fff
+
+    .title
+        font-size .23rem
+        height .36rem
+        width 2rem
+        background rgb(226,111,45)
+        line-height .36rem
+        display inline
         margin-left .2rem
+        color #fff
+        padding-left .1rem
+
+    .describe
+        font-size .23rem
+        margin-left .2rem
+        color #999
+        margin-top .25rem
+
+
     h3
-        font-size .6rem
+        font-size .28rem
         font-weight 500
         margin-left .2rem
+        display inline-block
 
 
 
