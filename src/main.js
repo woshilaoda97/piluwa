@@ -22,7 +22,12 @@ const store = createVuex( Vuex );
 //全局路由守卫
 router.beforeEach((to,from,next)=>{
   window.console.log(to)
-  next()
+  if(to.path==='/login'||to.path==='/register'){
+    next()
+  }else{
+    // next('login')
+    next()
+  }
 })
 
 new Vue({

@@ -1,29 +1,23 @@
 <template>
-  <div>
-    <img src="../../assets/img/login_logo.jpg" alt />
-    <div class="box">
-      <van-button round type="primary" class="button" color="rgb(126,174,107)" @click="loolshow">微信快速登录</van-button>
-      <van-button round type="default" class="button" is-link @click="showPopup">手机号登录/注册</van-button>
-    </div>
-    <Password />
-    <!-- 弹出框 -->
-    <!-- <van-popup v-model="show" position="bottom" :style="{ height: '97%' }" class="pop">
-      
+  <!-- <div> -->
+  <van-popup v-model="show" position="bottom" :style="{ height: '97%' }" class="pop">
+      <!-- 表单 -->
       <img src="../../assets/img/login_logo.jpg" alt />
       <div class="form">
         <div>
-          <input type="text" class="inp" placeholder="请输入手机号" />
+          <input type="text" class="inp" placeholder="请输入手机号" maxlength="11"/>
         </div>
         <div>
-          <input type="text" class="inp" placeholder="请输入密码" />
+          <input type="password" class="inp" placeholder="请输入密码" maxlength="12"/>
           <van-button plain round type="warning" class="forgetpass" size="mini">忘记密码</van-button>
         </div>
       </div>
       <van-button :disabled="disable" round type="primary" class="login-btn">登录</van-button>
       <div class="orther">
-        <router-link to>验证码登录</router-link>
-        <router-link to>新用户注册</router-link>
+        <router-link to="">验证码登录</router-link>
+        <router-link to="/register">新用户注册</router-link>
       </div>
+      <!-- 其它方式登录 -->
       
         <div class="orther-login">
           <div class="line-text">其他方式登录</div>
@@ -49,73 +43,50 @@
           </ul>
         </div>
       
-    </van-popup> -->
-    
-  </div>
+    </van-popup>
+  <!-- </div> -->
+
+
 </template>
 <script>
-import Password from "./Password"
-import { Button } from "vant";
-import { Popup } from "vant";
-import {SupBus} from "../../components/MixinComponents"
+import { Button,Popup } from "vant";
+import { SubBus } from "../../components/MixinComponents";
+
+
 export default {
-  mixins:[SupBus],
+  mixins:[SubBus],
+  // props:{
+  //   show: {
+  //     type: Boolean,
+  //     default: false
+  //   }
+  // },
   data() {
     return {
-      show: false,
-      tel: "",
-      password: "",
-    };
-  },
-  methods: {
-    showPopup() {
-      this.bus.$emit("showChange",true);
-    },
-    loolshow(){
-      console.log(this.show)
+      show:false,
+      disable: true
     }
   },
   components: {
     [Button.name]: Button,
-    // [Popup.name]: Popup
-    Password
+    [Popup.name]: Popup
   },
-  created () {
-    this.bus.$on("showChange", (v)=>{
-      console.log("father",v)
+  created(){
+    this.bus.$on("showChange",(v)=>{
       this.show = v
     })
+  },
+  updated (){
+    this.bus.$emit('showChange', this.show)
   }
-};
+}
 </script>
 <style lang="stylus" scoped>
-// @import '../../assets/font/iconfont.css';
+@import '../../assets/font/iconfont.css';
 div 
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  .pop 
-    border-top-left-radius: 0.2rem;
-    border-top-right-radius: 0.2rem;
-  
-
-  >>> img  
-    margin-top: 0.8rem;
-    height: 2.4rem;
-    width: 2.4rem;
-    overflow: hidden;
-  
-
-  .box 
-    margin-top: 1.8rem;
-
-    .button 
-      height: 1.1rem;
-      width: 6.5rem;
-      margin-bottom: 0.6rem;
-      font-size: 0.3rem;
-
   .form 
     margin-top: 0.5rem;
     width: 85%;
@@ -198,8 +169,6 @@ div
       color orange
     
   
-
-
 
 
 </style>

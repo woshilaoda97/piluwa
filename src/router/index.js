@@ -6,7 +6,7 @@ import Login from "../page/Login/Login.vue"
 import Detail from "../page/Detail/detail.vue"
 import Search from "../page/Search/Search.vue"
 import Hot from "../page/Homepage/Hot/Hot.vue"
-
+import Register from "../page/Login/Register.vue"
 
 const createRouter = (Router) => {
     return new Router({
@@ -57,6 +57,10 @@ const createRouter = (Router) => {
                 path: "/login",
                 component: Login,
 
+            },
+            {
+                path:"/register",
+                component: Register,
             },
             {
                 path: "/detail/:id",
