@@ -31,10 +31,10 @@
 </template>
 <script>
 import Vue from 'vue'
-import { Button } from "vant"
+
 import { Checkbox } from 'vant'
 import { NavBar } from 'vant'
-Vue.use(Button)
+
 export default {
   data() {
     return {
@@ -49,7 +49,6 @@ export default {
     }
   },
   components:{
-    Button,
     [Checkbox.name]:Checkbox,
     [NavBar.name]:NavBar
   },

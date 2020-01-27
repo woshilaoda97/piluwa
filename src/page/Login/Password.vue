@@ -49,7 +49,7 @@
 
 </template>
 <script>
-import { Button,Popup } from "vant";
+import { Popup } from "vant";
 import { SubBus } from "../../components/MixinComponents";
 
 
@@ -68,7 +68,6 @@ export default {
     }
   },
   components: {
-    [Button.name]: Button,
     [Popup.name]: Popup
   },
   created(){

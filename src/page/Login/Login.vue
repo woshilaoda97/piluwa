@@ -55,8 +55,8 @@
 </template>
 <script>
 import Password from "./Password"
-import { Button } from "vant";
-import { Popup } from "vant";
+// import { Button } from "vant";
+// import { Popup } from "vant";
 import {SupBus} from "../../components/MixinComponents"
 export default {
   mixins:[SupBus],
@@ -76,7 +76,7 @@ export default {
     }
   },
   components: {
-    [Button.name]: Button,
+    // [Button.name]: Button,
     // [Popup.name]: Popup
     Password
   },

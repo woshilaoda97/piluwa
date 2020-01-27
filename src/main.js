@@ -7,6 +7,7 @@ import Router from "vue-router";
 import createRouter from "./router";
 import createVuex from './vuex';
 import { Lazyload } from 'vant';//图片懒加载依赖
+import { Button } from "vant"//button按钮
 
 import './assets/flexble';
 import './assets/styl/common.styl';
@@ -14,8 +15,10 @@ import './assets/styl/common.styl';
 Vue.prototype.$axios = axios;
 //注册路由/返回路由实例
 Vue.use( Router );
-//注册全局组件库Vant
+//注册全局Vuex
 Vue.use( Vuex );
+//注册全局组件库Vant
+Vue.use(Button)
 Vue.use(Lazyload);//懒加载模块注册
 const router = createRouter( Router );
 const store = createVuex( Vuex );
