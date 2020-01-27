@@ -30,10 +30,11 @@
   
 </template>
 <script>
+import Vue from 'vue'
 import { Button } from "vant"
 import { Checkbox } from 'vant'
 import { NavBar } from 'vant'
-
+Vue.use(Button)
 export default {
   data() {
     return {
@@ -48,7 +49,7 @@ export default {
     }
   },
   components:{
-    [Button.name]: Button,
+    Button,
     [Checkbox.name]:Checkbox,
     [NavBar.name]:NavBar
   },
@@ -77,7 +78,7 @@ export default {
       }
     },
     useNameBlur(){
-      if(!this.phoneErr){
+      if(!this.phoneErr&&this.phoneNum.length===11){
         //如果手机号不为空，且通过正则判断，则发起axios请求检测手机号是否存在
         console.log('axios请求')
       }
