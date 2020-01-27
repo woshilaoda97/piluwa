@@ -25,8 +25,8 @@ router.beforeEach((to,from,next)=>{
   if(to.path==='/login'||to.path==='/register'){
     next()
   }else{
-    // next('login')
-    next()
+    next('login')
+    // next()
   }
 })
 
