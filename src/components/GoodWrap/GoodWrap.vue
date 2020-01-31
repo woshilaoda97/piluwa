@@ -17,12 +17,16 @@
 
 <script>
 export default {
-    
+    data() {
+        return {
+            id:1
+        }
+    },
     name : 'GoodWrap',
     
     methods: {
         jump(){
-            this.$router.push(`/detail/${this}`)
+            this.$router.push(`/detail/${this.id}`)
         }
     },
 }

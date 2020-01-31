@@ -55,12 +55,6 @@ import { SubBus } from "../../components/MixinComponents";
 
 export default {
   mixins:[SubBus],
-  // props:{
-  //   show: {
-  //     type: Boolean,
-  //     default: false
-  //   }
-  // },
   data() {
     return {
       show:false,

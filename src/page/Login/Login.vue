@@ -56,7 +56,6 @@
 <script>
 import Password from "./Password"
 // import { Button } from "vant";
-// import { Popup } from "vant";
 import {SupBus} from "../../components/MixinComponents"
 export default {
   mixins:[SupBus],
@@ -82,7 +81,6 @@ export default {
   },
   created () {
     this.bus.$on("showChange", (v)=>{
-      console.log("father",v)
       this.show = v
     })
   }

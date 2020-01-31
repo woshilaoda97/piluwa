@@ -54,8 +54,7 @@ export default {
   },
   methods: {
     onClickLeft() {
-      console.log('返回');
-      this.$router.push("login")
+      this.$router.back()
     },
     useNameChange(){
       if(this.phoneNum.length===11){
@@ -113,6 +112,7 @@ export default {
       margin-top: 0.3rem;
       width: 85%; 
       overflow hidden
+      
       .inp
         width: 100%;
         border-bottom: 0.01rem #ccc solid;
@@ -151,6 +151,13 @@ export default {
         height 1.1rem
         width 100%
     
-
-         
+.van-nav-bar.van-hairline--bottom
+  height 1rem 
+  line-height 1rem 
+  div
+    height 1rem
+  .van-nav-bar__title
+    line-height 1rem
+    font-size .4rem
+           
 </style>
